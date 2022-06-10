@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section{
+    &:nth-last-of-type(odd) {
+    background-color: $c-bg2 !important;
+    }
+}
+
+.myCustomBg{
+    color: white ; 
+    background-color: $c1 ;
+}

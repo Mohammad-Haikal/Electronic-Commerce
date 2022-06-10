@@ -1,0 +1,44 @@
+.animal {
+    width          : 130px;
+    height         : 130px;
+    object-fit     : cover;
+    object-position: center;
+    overflow       : hidden;
+}
+
+.animalSmall {
+    width          : 90px;
+    height         : 90px;
+    object-fit     : cover;
+    object-position: center;
+    overflow       : hidden;
+}
+
+.categories,
+.myCustomImg {
+    object-fit : cover;
+    overflow   : hidden;
+    user-select: none;
+}
+
+.categories {
+    object-position: center;
+}
+
+.myCustomImg {
+    object-position: top;
+}
+
+.imgLowOpacity {
+    transition-duration: 0.3s;
+    opacity            : 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.teamImg {
+    width : 200px;
+    height: 200px;
+}
