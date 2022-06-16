@@ -162,6 +162,11 @@ class User extends DB
     return self::getQueryResults("SELECT * FROM user WHERE id = $id AND is_admin = 0");
   }
 
+  public static function totalUsers()
+  {
+    return self::getQueryResults("SELECT count(id) as 'count' FROM `user`")[0]['count'];
+  }
+
 
   public static function getUserNameById($id)
   {

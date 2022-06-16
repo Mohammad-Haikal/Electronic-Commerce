@@ -127,11 +127,11 @@ if (isset($_GET['search'])) {
             </div>
         </div>
 
-        <div class="row p-3 g-0 justify-content-center bg-light">
+        <div class="row p-3 g-0 justify-content-center bg-light" style="max-height: 100vh; overflow-y: auto;">
             <?php foreach ($products as $product) : ?>
                 <div class="card m-2 col-md-5">
                     <?= $product['active'] ? "<h5 class='p-3 m-0 text-success text-center'>Active</h5>" : "<h5 class='p-3 m-0 text-danger text-center'>Not Active</h5>"; ?>
-                    <img class="card-img-top categories" src="<?= $product['image'] ?>" style="height: 220px;">
+                    <img class="card-img-top categories" src="<?= $product['image'] ?>" style="height: 300px;">
                     <div class="card-body">
                         <h3 class="card-title"><?= $product['name'] ?></h3>
                         <p><strong>Brand:</strong> <?= Brand::getBrandName($product['brand_id']) ?></p>

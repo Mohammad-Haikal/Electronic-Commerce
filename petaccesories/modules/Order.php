@@ -68,6 +68,13 @@ class Order extends DB
     return self::getQueryResults("SELECT `order`.`id`, `order`.`token`, `order`.`user_id`, `user`.`first_name`, `user`.`last_name`, `user`.`phone`, `order`.`address`, `order`.`street_name`, `order`.`building_number`, `product`.`name`,  `order_products`.`quantity`, `product`.`price`, `order`.`total_price`, `order_status`.`status`, `order`.`created_at` from `order` join `user` ON `order`.`user_id` = `user`.`id` join `order_status` ON `order`.`order_status_id` = `order_status`.`id` join `order_products` ON `order`.`token` = `order_products`.`order_token` join `product` ON `order_products`.`product_id` = `product`.`id` WHERE `order`.`user_id` = $userId ORDER BY `order`.`created_at` DESC");
   }
 
+  public static function totalOrders()
+  {
+    return self::getQueryResults("SELECT count(id) as 'count' FROM `order`")[0]['count'];
+  }
+
+  
+
   public static function delete($orderId)
   {
     self::insertQuery("DELETE FROM `order` WHERE `order`.`id` = $orderId");

@@ -88,6 +88,21 @@ class Product extends DB
     return self::getQueryResults("SELECT `image` FROM product");
   }
 
+  public static function getTopSold()
+  {
+    return self::getQueryResults("SELECT * FROM product ORDER BY `product`.`sold` DESC")[0];
+  }
+
+  public static function totalProducts()
+  {
+    return self::getQueryResults("SELECT sum(quantity) as 'sum' FROM `product`")[0]['sum'];
+  }
+
+  public static function totalSoldProducts()
+  {
+    return self::getQueryResults("SELECT sum(quantity) as 'sum' FROM `order_products`")[0]['sum'];
+  }
+
   // Search and Filter
   public static function search($value)
   {

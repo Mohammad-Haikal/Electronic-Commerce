@@ -14,14 +14,26 @@ Visitor::addVisitor();
     <?php include('./templates/nav.php') ?>
     <!-- Navbar -->
 
+    <!-- Search Box -->
+    <div class="container my-3 col-md-9">
+    <form class="input-group" action="store.php" method="GET">
+        <input type="text" name="searchValue" class="form-control col" placeholder="Search Product">
+        <button type="submit" name="search" class="btn myFilledCustomBtn px-5">Search</button>
+    </form>
+    </div>
+    <!-- Search Box -->
+
+
+
     <!-- Welcome Hero -->
-    <div class=" d-flex flex-column justify-content-center text-center p-1" style="height: 60vh">
+    <div class=" d-flex flex-column justify-content-center text-center mb-5">
         <!-- <img class="d-block mx-auto mb-4 bg-dark rounded-2" src="./img/logo.png" width="72" height="57"> -->
         <h1 class="fw-bold">Welcome to Pets Accessories</h1>
         <div>
             <p class="lead mb-4">Here you will find everything about your pets needs!</p>
             <a href="#carousel1" role="button" class="btn myCustomBtn">LET'S GET STARTED</a>
         </div>
+
     </div>
     <!-- Welcome Hero -->
 
@@ -33,7 +45,7 @@ Visitor::addVisitor();
                 <div class="carousel-caption d-none d-md-block row g-0 bg-black bg-opacity-25 p-3 rounded">
                     <h1 class="text-light">Welcome to Pets Accessories</h1>
                     <p class="text-light">Here you will find very interesting and helpful pets accessories!</p>
-                <a href="./store.php" class="btn myFilledCustomBtn w-25">DISCOVER MORE</a>
+                    <a href="./store.php" class="btn myFilledCustomBtn w-25">DISCOVER MORE</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -41,7 +53,7 @@ Visitor::addVisitor();
                 <div class="carousel-caption d-none d-md-block row g-0 bg-black bg-opacity-25 p-3 rounded">
                     <h1 class="text-light">Welcome to Pets Accessories</h1>
                     <p class="text-light">Here you will find very interesting and helpful pets accessories!</p>
-                <a href="./store.php" class="btn myFilledCustomBtn w-25">DISCOVER MORE</a>
+                    <a href="./store.php" class="btn myFilledCustomBtn w-25">DISCOVER MORE</a>
                 </div>
             </div>
         </div>

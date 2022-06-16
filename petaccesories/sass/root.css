@@ -11971,12 +11971,6 @@ section:nth-last-of-type(odd) {
   background-color: #FCA311;
 }
 
-.navbar .navbar-collapse {
-  -webkit-box-pack: justify  !important;
-      -ms-flex-pack: justify  !important;
-          justify-content: space-between  !important;
-}
-
 .bg-dark {
   background-color: #1b1f22 !important;
 }

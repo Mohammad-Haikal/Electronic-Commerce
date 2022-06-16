@@ -31,15 +31,10 @@
                 </li>   
             </ul>
 
-            <!-- Search Box -->
-            <form class="input-group d-none d-xl-flex" action="shopping.php" method="get" style="max-width: 450px">
-                <input type="text" name="searchValue" class="form-control" style="width: 30%;" placeholder="Search Product">
-                <input type="submit" name="search" class="form-control btn myFilledCustomBtn" value="Search">
-            </form>
-            <!-- Search Box -->
+            
 
             <?php if (User::check()) : ?>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php echo User::getUserFullName() ?>
@@ -57,7 +52,7 @@
                 </ul>
 
             <?php else : ?>
-                <div class="d-flex justify-content-md-end">
+                <div class="d-flex justify-content-md-end ms-auto">
                     <a class="btn btn-sm myCustomBtn" href="login.php">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
