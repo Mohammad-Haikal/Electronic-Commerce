@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 16, 2022 at 11:15 PM
+-- Generation Time: Jun 17, 2022 at 11:41 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   PRIMARY KEY (`id`),
   KEY `id` (`id`,`user_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `feedback`
@@ -264,12 +264,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `is_admin`, `first_name`, `last_name`, `email`, `phone`, `password`, `created_at`) VALUES
-(1, 0, 'Ahmad', 'Khaleel', 'ahmad@gmail.com', '0790580501', 'ahmad', '2022-05-08 11:54:37'),
-(2, 0, 'Saeed', 'Ahmad', 'saeed@gmail.com', '123422', 'asd', '2022-05-08 12:41:00'),
+(1, 0, 'Ahmad', 'Khaleel', 'ahmad@gmail.com', '0790580501', 'Ahmad#000', '2022-05-08 11:54:37'),
 (4, 0, 'Sajeda', 'Fahed', 'sajedafahed50@gmail.com', '09876545433', 'Sajeda2001', '2022-05-10 19:52:14'),
-(5, 0, 'Raghad', 'Kk', 'raghad114@gmail.com', '54563546545', '0110', '2022-05-10 19:54:30'),
-(7, 1, 'Muhammad', 'Haikal', 'muhhl2000@gmail.com', '0790580502', 'muh', '2022-05-14 21:38:00'),
-(9, 0, 'Sad', 'Sad', 'sad@gmail.com', '1234', 'sad', '2022-05-14 22:18:25');
+(5, 0, 'Raghad', 'Ha', 'raghad114@gmail.com', '54563546545', 'Raghad@#111', '2022-05-10 19:54:30'),
+(7, 1, 'Muhammad', 'Haikal', 'muhhl2000@gmail.com', '0790580502', 'Admin@123', '2022-05-14 21:38:00');
 
 -- --------------------------------------------------------
 
