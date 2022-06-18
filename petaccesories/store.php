@@ -54,7 +54,7 @@ if (!isset($min) || !isset($min)) {
 
 if (isset($_POST['addComment'])) {
     if (!User::check()) {
-        header("location: ./login");
+        header("location: ./login.php");
     }
 
     Comment::add($_SESSION['user_id'], $_POST['productId'], $_POST['comment']);
@@ -62,7 +62,7 @@ if (isset($_POST['addComment'])) {
 
 if (isset($_POST['deleteComment'])) {
     if (!User::check()) {
-        header("location: ./login");
+        header("location: ./login.php");
     }
     Comment::delete($_POST['commentId']);
 }
@@ -240,7 +240,7 @@ if (isset($_POST['submitFeedback'])) {
                                         <div class="col-md-6 ">
                                             <h4 class="mb-1">About the product:</h4>
                                             <textarea class="myCustomText py-2 w-100 form-control mb-2 border-0 bg-light" style="text-align: justify;" rows="4" disabled><?= $product['description'] ?></textarea>
-                                            <h6>Brand: <a href="brand?brandId=<?= $product['brand_id'] ?>" class="price"><?= Brand::getBrandName($product['brand_id']) ?></a></h6>
+                                            <h6>Brand: <a href="brand.php?brandId=<?= $product['brand_id'] ?>" class="price"><?= Brand::getBrandName($product['brand_id']) ?></a></h6>
                                             <h6>Category: <span class="price"><?= Category::getCategory($product['category_id']) ?></span></h6>
                                             <h6 class="mb-1">In Stock: <span class="price"><?= $product['quantity'] ?></span></h6>
                                             <h6 class="mb-1">sold: <span class="price"><?= $product['sold'] ?></span> times</h6>

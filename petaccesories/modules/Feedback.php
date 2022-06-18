@@ -18,13 +18,13 @@ class Feedback extends DB
         }
 
         self::insertQuery("INSERT INTO `feedback` (`user_id`, `feedback`) VALUES ($userId, '$feedback')");
-        header("location: ./store");
+        header("location: ./store.php");
     }
 
     public static function delete($feedbackId)
     {
         self::insertQuery("DELETE FROM `feedback` WHERE `feedback`.`id` = $feedbackId");
         $success = "Feedback deleted successfully.";
-        header("location: ./manageFeedbacks?success=$success");
+        header("location: ./manageFeedbacks.php?success=$success");
     }
 }

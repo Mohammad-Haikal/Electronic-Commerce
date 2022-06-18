@@ -3,7 +3,7 @@ include('./templates/PHPScripts.php');
 
 
 if (!Admin::check() && !User::check()) {
-    header("location: ./login");
+    header("location: ./login.php");
 }
 
 $productId = $_POST['product_id'];

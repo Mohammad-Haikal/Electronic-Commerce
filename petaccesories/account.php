@@ -2,7 +2,7 @@
 include('./templates/PHPScripts.php');
 
 if (!User::check() && !Admin::check()) {
-    header("location: ./login");
+    header("location: ./login.php");
 } elseif (Admin::check()) {
     $user = Admin::getAdmin()[0];
 } else {

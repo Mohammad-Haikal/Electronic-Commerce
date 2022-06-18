@@ -33,7 +33,7 @@ class Order extends DB
     // Check if itemsArray is empty, return to store.php with error message
     if (empty($itemsArray)) {
       $error = "Sorry, your cart is empty.";
-      header("location: ./store?error=$error");
+      header("location: ./store.php?error=$error");
       exit;
     }
 
@@ -47,8 +47,8 @@ class Order extends DB
     unset($_SESSION['cart']);
 
     // Return to store.php with success message
-    $success = "The order has been created successfully. The shipping company will continue the shipping process. <a class='link-primary' href='./orders'>View Order</a>";
-    header("location: ./store?success=$success&ordered=1");
+    $success = "The order has been created successfully. The shipping company will continue the shipping process. <a class='link-primary' href='./orders.php'>View Order</a>";
+    header("location: ./store.php?success=$success&ordered=1");
   }
 
   protected static function productSold($productId, $quantity)
@@ -80,11 +80,11 @@ class Order extends DB
     self::insertQuery("DELETE FROM `order` WHERE `order`.`id` = $orderId");
     $success = "Order deleted successfully.";
     if (Admin::check()) {
-      header("location: ./manageOrders?success=$success");
+      header("location: ./manageOrders.php?success=$success");
       exit;
     } else {
 
-      header("location: ./orders?success=$success");
+      header("location: ./orders.php?success=$success");
     }
   }
 }

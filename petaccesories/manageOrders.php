@@ -2,7 +2,7 @@
 include('./templates/PHPScripts.php');
 
 if (!Admin::check()) {
-    header("location: ./login");
+    header("location: ./login.php");
 }
 
 $orders = Order::viewAllOrders();

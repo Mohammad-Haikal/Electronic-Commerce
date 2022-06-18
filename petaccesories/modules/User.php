@@ -60,9 +60,9 @@ class User extends DB
       // Store
       self::insertQuery("INSERT INTO `user` (`first_name`, `last_name`, `email`, `phone`, `password`) VALUES ('$first_name', '$last_name', '$email', '$phone', '$password');");
       $success = "User created successfully";
-      header("location: ./login?success=$success");
+      header("location: ./login.php?success=$success");
     } else {
-      header("location: ./signup?error=" . self::$error);
+      header("location: ./signup.php?error=" . self::$error);
       exit;
     }
   }
@@ -81,10 +81,10 @@ class User extends DB
         if ($user['is_admin'] == 1) {
           $_SESSION['user_id'] = $user['id'];
           $_SESSION['admin_id'] = $user['id'];
-          header("location: ./dashboard");
+          header("location: ./dashboard.php");
         } else {
           $_SESSION['user_id'] = $user['id'];
-          header("location: ./store");
+          header("location: ./store.php");
         }
         exit;
       }
@@ -92,7 +92,7 @@ class User extends DB
 
     if (!$found) {
       $error = "Wrong email or password";
-      header("location: ./login?error=$error");
+      header("location: ./login.php?error=$error");
     }
   }
 
@@ -109,7 +109,7 @@ class User extends DB
     foreach ($users as $user) {
       if ($user['email'] == $email && $user['id'] != $_SESSION['user_id']) {
         $error = "This email is already exist";
-        header("location: ./account?error=$error");
+        header("location: ./account.php?error=$error");
         exit;
       }
     }
@@ -117,7 +117,7 @@ class User extends DB
     // Update
     self::insertQuery("UPDATE `user` SET `first_name` = '$first_name', `last_name` = '$last_name', `email` = '$email', `phone` = '$phone' WHERE `user`.`id` = {$_SESSION['user_id']};");
     $success = "Personal info changed successfully";
-    header("location: ./account?success=$success");
+    header("location: ./account.php?success=$success");
   }
 
   public static function updatePassword($oldPassword, $password, $passwordR)
@@ -130,21 +130,21 @@ class User extends DB
     // Check old password
     if ($oldPassword != self::getUser()[0]['password']) {
       $error = "The old password is wrong";
-      header("location: ./account?error=$error");
+      header("location: ./account.php?error=$error");
       exit;
     }
 
     // Check password
     if ($password != $passwordR) {
       $error = "The passwords you've entered aren't the same";
-      header("location: ./account?error=$error");
+      header("location: ./account.php?error=$error");
       exit;
     }
 
     // Update
     self::insertQuery("UPDATE `user` SET `password` = '$password' WHERE `user`.`id` = {$_SESSION['user_id']};");
     $success = "Password changed successfully";
-    header("location: ./account?success=$success");
+    header("location: ./account.php?success=$success");
   }
 
   protected static function getAllUsers()
@@ -202,6 +202,6 @@ class User extends DB
     self::insertQuery("DELETE FROM `user` WHERE `id` = $userId;");
     $success = "User Deleted successfully";
 
-    header("location: ./manageUsers?success=$success");
+    header("location: ./manageUsers.php?success=$success");
   }
 }

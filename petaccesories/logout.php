@@ -10,4 +10,4 @@ unset($_SESSION['cart']);
 
 // session_destroy();
 
-header("location: ./index");
+header("location: ./index.php");

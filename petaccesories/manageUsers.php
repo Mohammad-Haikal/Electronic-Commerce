@@ -2,7 +2,7 @@
 include('./templates/PHPScripts.php');
 
 if (!Admin::check()) {
-    header("location: ./login");
+    header("location: ./login.php");
 }
 
 $users = User::viewAllUsers();
@@ -72,7 +72,7 @@ if (isset($_POST['deleteAdmin'])) {
 
         <div class="row g-0 justify-content-between align-items-center">
             <h3 class="mb-0" style="width: fit-content;">Manage Admins</h3>
-            <a href="addAdmin" class="btn myFilledCustomBtn2" style="width: fit-content;">+ New Admin</a>
+            <a href="addAdmin.php" class="btn myFilledCustomBtn2" style="width: fit-content;">+ New Admin</a>
         </div>
         <hr class="myCustomHr">
 
@@ -114,14 +114,6 @@ if (isset($_POST['deleteAdmin'])) {
 
     <!-- JS Scripts -->
     <?php include('./templates/jsScripts.php') ?>
-
-    <script>
-        // $(function() {
-        //     $(".user-row").click(function(e) {
-        //         window.location = $(this).data("href");
-        //     });
-        // });
-    </script>
     <!-- JS Scripts -->
 </body>
 

@@ -2,7 +2,7 @@
 include('./templates/PHPScripts.php');
 
 if (!User::check()) {
-    header("location: ./login");
+    header("location: ./login.php");
 }
 
 

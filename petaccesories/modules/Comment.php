@@ -16,12 +16,12 @@ class Comment extends DB
         $comment = mysqli_real_escape_string($conn, htmlspecialchars($comment));
 
         if (empty($comment)) {
-            header("location: ./store");
+            header("location: ./store.php");
             exit;
         }
 
         self::insertQuery("INSERT INTO `comment` (`user_id`, `product_id`, `comment`) VALUES ($userId, $productId, '$comment')");
-        header("location: ./store");
+        header("location: ./store.php");
     }
 
     public static function delete($commentId)
@@ -30,6 +30,6 @@ class Comment extends DB
         $commentId = mysqli_real_escape_string($conn, htmlspecialchars($commentId));
 
         self::insertQuery("DELETE FROM `comment` WHERE `id` = $commentId");
-        header("location: ./store");
+        header("location: ./store.php");
     }
 }

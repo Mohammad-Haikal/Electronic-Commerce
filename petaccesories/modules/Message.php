@@ -25,6 +25,6 @@ class Message extends DB
     {
         self::insertQuery("DELETE FROM `message` WHERE `message`.`id` = $messageId");
         $success = "Message deleted successfully.";
-        header("location: ./manageMessages?success=$success");
+        header("location: ./manageMessages.php?success=$success");
     }
 }

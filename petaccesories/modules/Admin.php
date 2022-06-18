@@ -42,9 +42,9 @@ class Admin extends User
       // Store
       self::insertQuery("INSERT INTO `user` (`is_admin`, `first_name`, `last_name`, `email`, `phone`, `password`) VALUES (1, '$first_name', '$last_name', '$email', '$phone', '$password');");
       $success = "Admin added successfully";
-      header("location: ./manageUsers?success=$success");
+      header("location: ./manageUsers.php?success=$success");
     } else {
-      header("location: ./addAdmin?error=" . self::$error);
+      header("location: ./addAdmin.php?error=" . self::$error);
       exit;
     }
   }
@@ -57,6 +57,6 @@ class Admin extends User
     self::insertQuery("DELETE FROM `user` WHERE `id` = $adminId;");
     $success = "Admin Deleted successfully";
 
-    header("location: ./manageUsers?success=$success");
+    header("location: ./manageUsers.php?success=$success");
   }
 }

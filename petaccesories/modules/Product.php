@@ -14,7 +14,7 @@ class Product extends DB
     // Check if file already exists
     if (file_exists($target_file)) {
       $error = "Sorry, your image was not uploaded, This image already exists, try to change its name before uploading.";
-      header("location: ./dashboard?error=$error");
+      header("location: ./dashboard.php?error=$error");
       exit;
       $uploadOk = 0;
     }
@@ -24,7 +24,7 @@ class Product extends DB
       $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     ) {
       $error = "Sorry, your image was not uploaded, only JPG, JPEG, or PNG files are allowed.";
-      header("location: ./dashboard?error=$error");
+      header("location: ./dashboard.php?error=$error");
       exit;
       $uploadOk = 0;
     }
@@ -35,7 +35,7 @@ class Product extends DB
         return $target_file;
       } else {
         $error = "Sorry, there was an error uploading your file.";
-        header("location: ./dashboard?error=$error");
+        header("location: ./dashboard.php?error=$error");
         exit;
       }
     }
@@ -60,7 +60,7 @@ class Product extends DB
     // Store
     self::insertQuery("INSERT INTO `product` (`brand_id`, `category_id`, `name`, `image`, `description`, `price`, `quantity`) VALUES ($brandId, $categoryId, '$name', '$image_target_path', '$description', '$price', '$quantity')");
     $success = "Product added successfully";
-    header("location: ./manageProducts?success=$success");
+    header("location: ./manageProducts.php?success=$success");
   }
 
   public static function getProduct($productId)
@@ -151,10 +151,10 @@ class Product extends DB
     self::insertQuery("UPDATE `product` SET `image` = '$image_target_path' WHERE `product`.`id` = $productId;");
     $success = "Product Image updated successfully";
     if ($_SESSION['admin_id']) {
-      header("location: ./manageProducts?success=$success");
+      header("location: ./manageProducts.php?success=$success");
       exit;
     }
-    header("location: ./dashboard?success=$success");
+    header("location: ./dashboard.php?success=$success");
   }
 
   public static function updateInfo($productId, $name, $brandId, $categoryId, $description, $price, $quantity)
@@ -171,10 +171,10 @@ class Product extends DB
     self::insertQuery("UPDATE `product` SET `name` = '$name', `brand_id` = '$brandId', `category_id` = '$categoryId', `description` = '$description', `price` = '$price', `quantity` = '$quantity' WHERE `product`.`id` = $productId;");
     $success = "Product info updated successfully";
     if ($_SESSION['admin_id']) {
-      header("location: ./manageProducts?success=$success");
+      header("location: ./manageProducts.php?success=$success");
       exit;
     }
-    header("location: ./dashboard?success=$success");
+    header("location: ./dashboard.php?success=$success");
   }
 
   // Delete
@@ -191,7 +191,7 @@ class Product extends DB
 
     self::insertQuery("DELETE FROM `product` WHERE `id` = $productId;");
     $success = "Product Deleted successfully";
-    header("location: ./manageProducts?success=$success");
+    header("location: ./manageProducts.php?success=$success");
   }
 
   // Activate
@@ -203,7 +203,7 @@ class Product extends DB
 
     self::insertQuery("UPDATE `product` SET `active` = '1' WHERE `product`.`id` = $productId;");
     $success = "Product activated";
-    header("location: ./manageProducts?success=$success");
+    header("location: ./manageProducts.php?success=$success");
   }
 
   // Deactivate
@@ -215,6 +215,6 @@ class Product extends DB
 
     self::insertQuery("UPDATE `product` SET `active` = '0' WHERE `product`.`id` = $productId;");
     $success = "Product deactivated";
-    header("location: ./manageProducts?success=$success");
+    header("location: ./manageProducts.php?success=$success");
   }
 }
