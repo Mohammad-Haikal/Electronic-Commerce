@@ -41,7 +41,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <?php if (Admin::check()) : ?>
-                                <li><a class="dropdown-item" href="dashboard.php">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="dashboard.php">Admin Dashboard</a></li>
                             <?php endif; ?>
 
                             <li><a class="dropdown-item <?php if ($currentPage == 'orders.php') {echo "myFilledCustomBtn2";}?>" href="orders.php">Orders</a></li>

@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container-fluid pe-md-5 ps-md-5">
             <a class="navbar-brand" href="index.php">
-                <!-- <img src="./img/logo.png" class="mx-1 " style="width: 40px; height: 40px;" alt="Logo"> -->
+                <img src="./img/logo.png" class="mx-1 " style="width: 35px; height: 35px;" alt="Logo">
                 Pets Accessories
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,6 +27,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if ($currentPage == 'manageFeedbacks.php') {echo "active";}?>" href="./manageFeedbacks.php">Manage Feedbacks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($currentPage == 'manageMessages.php') {echo "active";}?>" href="./manageMessages.php">Manage Messages</a>
                     </li>
 
                 </ul>

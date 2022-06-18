@@ -5,8 +5,8 @@
 <footer class="row g-0 bg-dark p-5">
     <div class="col-md-4 p-3">
         <a class="row g-0" href="index.php">
-            <!-- <img src="./img/logo.png" class="mx-1 pb-1" style="width: 40px; height: 40px;" alt="Logo"> -->
-            <h3 class="col">Pets Accessories</h3>
+            <img src="./img/logo.png" class="mx-1 pb-1" style="width: 40px; height: 40px;" alt="Logo">
+            <h3 class="col">Pet Accessories</h3>
         </a>
         <p style="text-align: justify;">A store that online sells different kinds of pet accessories and supplies including: food, treats, toys, collars, leashes, cat litter, cages, and aquariums.</p>
     </div>

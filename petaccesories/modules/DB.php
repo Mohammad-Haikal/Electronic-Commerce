@@ -9,15 +9,15 @@ class DB
 
   protected static function connect()
   {
-    // self::$servername = "localhost";
-    // self::$username = "root";
-    // self::$password = "";
-    // self::$dbname = "petaccessories";
+    self::$servername = "localhost";
+    self::$username = "root";
+    self::$password = "";
+    self::$dbname = "petaccessories";
 
-    self::$servername = "sql203.epizy.com";
-    self::$username = "epiz_31973952";
-    self::$password = "gGD7AG42bivGEj5";
-    self::$dbname = "epiz_31973952_petaccessories";
+    // self::$servername = "sql203.epizy.com";
+    // self::$username = "epiz_31973952";
+    // self::$password = "gGD7AG42bivGEj5";
+    // self::$dbname = "epiz_31973952_petaccessories";
     
     $conn = new mysqli(self::$servername, self::$username, self::$password, self::$dbname);
 
