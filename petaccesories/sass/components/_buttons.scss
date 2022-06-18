@@ -1,10 +1,10 @@
-.myCustomBtn,
-.myFilledCustomBtn,
-.myFilledCustomBtn2,
-.myQuantityCustomBtn {
+.myCustomBtn, .myFilledCustomBtn, .myQuantityCustomBtn {
+    padding         : 10px;
     color           : $c1;
     border-radius   : 5px;
     background-color: unset;
+    border          : solid 2px $c1;
+    width           : fit-content;
     transition      : 0.2s;
 
     &:hover {
@@ -13,35 +13,20 @@
     }
 }
 
-.myCustomBtn{
-    border          : solid 2px $c1;
-
-}
-
 .myFilledCustomBtn {
     color           : white !important;
     background-color: $c1 !important;
-    
+    border          : none !important;
 
     &:hover {
         background-color: $c2 !important;
     }
 }
 
-.myFilledCustomBtn2 {
-    color           : white !important;
-    background-color: $c-bg3 !important;
-    
-
-    &:hover {
-        background-color: $c-bg4 !important;
-    }
-}
-
 .myQuantityCustomBtn {
     color           : white !important;
     background-color: $c-bg3 !important;
-    
+    border          : none !important;
 
     &:hover {
         background-color: $c-bg4 !important;

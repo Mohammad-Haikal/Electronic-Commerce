@@ -1,10 +1,7 @@
-$(function () {
-  $('#errorAlert button').click(function (e) {
-    $('#errorAlert').remove();
-  });
-  $('#successAlert button').click(function (e) {
-    $('#successAlert').remove();
-  });
+var myCarousel = document.querySelector("#carouselExampleCaptions");
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 5000,
+  touch: true,
 });
 
 function paymentMethod(value) {
@@ -44,29 +41,3 @@ function paymentMethod(value) {
     }
   }
 }
-
-
-function updateCart(product_id, quantity) {
-  $.ajax({
-    type: "post",
-    url: "./modules/ajax/updateCart.php",
-    data: { 'addCartItem': true, 'product_id': product_id, 'quantity': quantity },
-    success: function (cartItems) {
-      cartItems = JSON.parse(cartItems)
-
-      if (typeof cartItems.error != 'undefined') {
-        window.alert(`Sorry, there are only ${cartItems.stock} in stock, please select a lower quantity`);
-      } else {
-
-        let cartTotalItems = 0;
-        for (const key in cartItems) {
-          cartTotalItems += cartItems[key].quantity;
-        }
-
-        $('#cartTotalItems').html(cartTotalItems);
-        $(`#quantity${product_id}`).val("1");
-      }
-    },
-  });
-}
-

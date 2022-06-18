@@ -11958,21 +11958,8 @@ fieldset:disabled .btn {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-section:nth-last-of-type(odd) {
-  background-color: #f8f8f8 !important;
-}
-
-.myCustomBg {
-  color: white;
-  background-color: #FCA311;
-}
-
-.bg-dark {
-  background-color: #1b1f22 !important;
+footer {
+  background-color: #0D0D0D;
 }
 
 footer h1, footer .h1, footer h3, footer .h3 {
@@ -11981,6 +11968,25 @@ footer h1, footer .h1, footer h3, footer .h3 {
 
 footer p {
   color: #c2c2c2;
+}
+
+.navbar {
+  background-color: #14213d !important;
+}
+
+.navbar .navbar-collapse {
+  -webkit-box-pack: justify  !important;
+      -ms-flex-pack: justify  !important;
+          justify-content: space-between  !important;
+}
+
+section:nth-last-of-type(odd) {
+  background-color: #f8f8f8 !important;
+}
+
+.myCustomBg {
+  color: white !important;
+  background-color: #FCA311 !important;
 }
 
 * {
@@ -11996,14 +12002,6 @@ footer p {
   height: 2px !important;
   border: none;
   opacity: 1;
-}
-
-.myCustomText {
-  color: #14213D;
-}
-
-.myCustomText:hover {
-  color: #1b1f22;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h5, .h5, h6, .h6 {
@@ -12035,61 +12033,59 @@ a:hover {
 }
 
 .myCustomLink {
-  color: #1b1f22 !important;
+  color: #1a1d1fc4 !important;
 }
 
 .myCustomLink:hover {
   color: #0f1112 !important;
 }
 
-.myCustomBtn,
-.myFilledCustomBtn,
-.myFilledCustomBtn2,
-.myQuantityCustomBtn {
+.myCustomBtn, .myFilledCustomBtn, .myQuantityCustomBtn {
+  padding: 10px;
   color: #FCA311;
   border-radius: 5px;
   background-color: unset;
+  border: solid 2px #FCA311;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.myCustomBtn:hover,
-.myFilledCustomBtn:hover,
-.myFilledCustomBtn2:hover,
-.myQuantityCustomBtn:hover {
+.myCustomBtn:hover, .myFilledCustomBtn:hover, .myQuantityCustomBtn:hover {
   background-color: #FCA311;
   color: white;
-}
-
-.myCustomBtn {
-  border: solid 2px #FCA311;
 }
 
 .myFilledCustomBtn {
   color: white !important;
   background-color: #FCA311 !important;
+  border: none !important;
 }
 
 .myFilledCustomBtn:hover {
   background-color: #ffb134 !important;
 }
 
-.myFilledCustomBtn2 {
-  color: white !important;
-  background-color: #14213d !important;
-}
-
-.myFilledCustomBtn2:hover {
-  background-color: #1b1f22 !important;
-}
-
 .myQuantityCustomBtn {
   color: white !important;
   background-color: #14213d !important;
+  border: none !important;
 }
 
 .myQuantityCustomBtn:hover {
-  background-color: #1b1f22 !important;
+  background-color: #0D0D0D !important;
+}
+
+.carousel-caption {
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: auto;
+  color: black;
+  text-align: justify;
 }
 
 .carousel-item > img {
@@ -12099,19 +12095,6 @@ a:hover {
      object-position: center;
   overflow: hidden;
   max-height: 90vh;
-}
-
-.carousel-item {
-  -webkit-transition: -webkit-transform 3s ease-in-out;
-  transition: -webkit-transform 3s ease-in-out;
-  transition: transform 3s ease-in-out;
-  transition: transform 3s ease-in-out, -webkit-transform 3s ease-in-out;
-}
-
-.carousel-fade .active.carousel-item-start,
-.carousel-fade .active.carousel-item-end {
-  -webkit-transition: opacity 0s 3s;
-  transition: opacity 0s 3s;
 }
 
 .animal {
@@ -12134,8 +12117,7 @@ a:hover {
   overflow: hidden;
 }
 
-.categories,
-.myCustomImg {
+.categories, .myCustomImg {
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
@@ -12163,10 +12145,5 @@ a:hover {
 
 .imgLowOpacity:hover {
   opacity: 1;
-}
-
-.teamImg {
-  width: 200px;
-  height: 200px;
 }
 /*# sourceMappingURL=root.css.map */

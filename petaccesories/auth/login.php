@@ -33,7 +33,7 @@
                         <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contct Us</a>
+                        <a class="nav-link" href="contact.html">Contct Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -52,47 +52,43 @@
         </div>
     </nav>
     <!-- Navbar -->
-    <section class="p-5 pb-1 text-center d-flex flex-column align-items-center">
-        <h2>REACH US</h2>
-        <hr class="col-10 col-sm-3 mt-0 myCustomHr">
-    </section>
 
-
-    <section class="d-flex flex-column flex-md-row justify-content-center align-items-stretch p-5">
-        <div class="rounded shadow-sm bg-white p-3 col-12 col-md-5 mb-2 m-md-3">
-            <h3 class="text-center mb-3">SEND US A MESSAGE</h3>
+    <div class="container min-vh-100">
+        <h4 class="mt-3 text-center">Log In</h4>
+        <hr class="col-12 myCustomHr">
+        <div class="card mt-3 p-3 row">
             <!-- Form -->
             <form>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone.</div>
-                </div>
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Your message here" style="height: 100px"></textarea>
-                    <label for="floatingTextarea">Your Message</label>
-                  </div>
-                <button type="submit" class="myCustomBtn">Send Message</button>
-              </form>
-        </div>
-        <div class="rounded shadow-sm bg-white p-3 col-12 col-md-5 m-md-3">
-            <h3 class="text-center">CONTACT THE SALES</h3>
-            <p class="text-center opacity-50 ">We are happy to serve you anytime!</p>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="address" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
 
-            <ul class="list-group list-group-flush ps-3 col-10">
-                <li class="list-group-item"><img src="./img/icons/icons8-call-58.png" class="m-2" style="width: 30px; height: 30px;" alt=""><a href="#" class="myCustomLink">Jordan - Amman, Irbid, Zarqa'</a></li>
-                <li class="list-group-item"><img src="./img/icons/icons8-call-58.png" class="m-2" style="width: 30px; height: 30px;" alt=""><a href="#" class="myCustomLink">+962790580502</a></li>
-                <li class="list-group-item"><img src="./img/icons/icons8-call-58.png" class="m-2" style="width: 30px; height: 30px;" alt=""><a href="#" class="myCustomLink">@petaccessories</a></li>
-            </ul>
+                    <div class="col-12 mb-3">
+                        <label for="address2" class="form-label">Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                </div>
+
+                <button id="onlinePayBtn" class="w-100 myFilledCustomBtn btn-lg" type="submit">Log In</button>
+            </form>
         </div>
-    </section>
-       
+        <div class="card mt-3 mb-3 p-4 col-md-12 row">
+            <p class="text-center m-0">Don't have an account? <a class="link-primary text-decoration-underline"
+                    href="./signup.html">Sign up</a></p>
+        </div>
+    </div>
+
+
+
 
     <!-- Footer -->
     <footer class="d-flex flex-column flex-md-row  p-5">
         <div class="col-12 col-md-3 p-3">
             <h3>Pet Accessories</h3>
-            <p style="text-align: justify;">A store that online sells different kinds of pet accessories and supplies including: food, treats,
+            <p style="text-align: justify;">A store that online sells different kinds of pet accessories and supplies
+                including: food, treats,
                 toys, collars, leashes, cat litter, cages, and aquariums.</p>
         </div>
         <div class="col-12 col-md-2 p-3">
@@ -100,9 +96,9 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="index.html">Home</a></li>
                 <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="store.html" >store</a></li>
-                <li class="nav-item"><a href="gallery.html" >Gallery</a></li>
-                <li class="nav-item"><a href="contact.html" class="active">Contct Us</a></li>
+                <li class="nav-item"><a href="store.html">Store</a></li>
+                <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html">Contct Us</a></li>
             </ul>
         </div>
         <div class="col-12 col-md-3 p-3">
@@ -130,6 +126,8 @@
 
     <!-- Scripts -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./jquery/jquery.js"></script>
+    <script src="./jquery/jquery-ui.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

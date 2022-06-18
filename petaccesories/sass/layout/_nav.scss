@@ -1,9 +1,7 @@
-// .navbar{
-//     .navbar-collapse {
-//         justify-content: space-between  !important;
-//     }
-// }
+.navbar{
+    background-color: $c-bg3 !important;
 
-.bg-dark{
-    background-color: $c-bg4 !important;
+    .navbar-collapse {
+        justify-content: space-between  !important;
+    }
 }
