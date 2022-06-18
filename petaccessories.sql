@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 17, 2022 at 11:41 AM
+-- Generation Time: Jun 18, 2022 at 12:11 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -120,6 +120,31 @@ CREATE TABLE IF NOT EXISTS `feedback` (
 
 INSERT INTO `feedback` (`id`, `user_id`, `feedback`) VALUES
 (4, 5, 'This is a good website');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE IF NOT EXISTS `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `email` varchar(50) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`id`, `name`, `phone`, `email`, `message`) VALUES
+(2, 'Ahmad', '0790342021', 'ahmad@gmail.com', 'I am Ahmad, I want to say thank you for this website :)'),
+(3, 'Khaleel Raed', '', 'khaleel@gmail.com', 'Hey, thank you for your good services'),
+(6, 'Roaa Asad', '0790580301', 'asad.roaa@yahoo.com', 'Can please you contact me?');
 
 -- --------------------------------------------------------
 
@@ -287,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `visitors` (
 --
 
 INSERT INTO `visitors` (`id`, `number`) VALUES
-(1, 24);
+(1, 25);
 
 --
 -- Constraints for dumped tables
