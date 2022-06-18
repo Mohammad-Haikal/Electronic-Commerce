@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 18, 2022 at 12:11 AM
+-- Generation Time: Jun 18, 2022 at 12:14 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -292,7 +292,7 @@ INSERT INTO `user` (`id`, `is_admin`, `first_name`, `last_name`, `email`, `phone
 (1, 0, 'Ahmad', 'Khaleel', 'ahmad@gmail.com', '0790580501', 'Ahmad#000', '2022-05-08 11:54:37'),
 (4, 0, 'Sajeda', 'Fahed', 'sajedafahed50@gmail.com', '09876545433', 'Sajeda2001', '2022-05-10 19:52:14'),
 (5, 0, 'Raghad', 'Ha', 'raghad114@gmail.com', '54563546545', 'Raghad@#111', '2022-05-10 19:54:30'),
-(7, 1, 'Muhammad', 'Haikal', 'muhhl2000@gmail.com', '0790580502', 'Admin@123', '2022-05-14 21:38:00');
+(7, 1, 'Mohammad', 'Haikal', 'admin@petaccessories.com', '0790580502', 'Admin@123', '2022-05-14 21:38:00');
 
 -- --------------------------------------------------------
 
